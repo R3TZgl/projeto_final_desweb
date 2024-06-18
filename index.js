@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
+let c = 0
 
 app.get('/', (req,res)=>{
-    res.send("EU NAO ACREDITO")
+    c += 1
+    res.send("EU NÃO ACREDITO" + c)
 })
 
 app.listen(3000, ()=>{
