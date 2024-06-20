@@ -1,10 +1,21 @@
 const express = require('express')
 const app = express()
-let c = 0
+
+const { engine } = require('express-handlebars')
+const path = require('path')
+
+app.set('view engine', 'handlebars')
+app.engine('hendlebars', engine())
+
+app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
+app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')))
+app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
+
+let count = 0
 
 app.get('/', (req,res)=>{
-    c += 1
-    res.send("EU NÃO ACREDITO" + c)
+    count += 1
+    res.send("EU NÃO ACREDITO" + count)
 })
 
 app.listen(3000, ()=>{
