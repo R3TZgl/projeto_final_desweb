@@ -13,7 +13,7 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
 
 //let count = 0
 
-app.get('/', (req,res)=>{
+app.get('/', (req,res) =>{
     //count += 1
     //res.send("EU NÃO ACREDITO" + count)
     res.render('index')
@@ -22,4 +22,8 @@ app.get('/', (req,res)=>{
 app.listen(3000, ()=>{
     console.log('servidor online')
     console.log('http://localhost:3000/')
+})
+
+app.get('/clientes', (req,res) =>{
+    res.render('clientes/index')
 })
