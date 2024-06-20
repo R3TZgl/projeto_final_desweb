@@ -11,11 +11,12 @@ app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist
 app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')))
 app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
 
-let count = 0
+//let count = 0
 
 app.get('/', (req,res)=>{
-    count += 1
-    res.send("EU NÃO ACREDITO" + count)
+    //count += 1
+    //res.send("EU NÃO ACREDITO" + count)
+    res.render('index')
 })
 
 app.listen(3000, ()=>{
