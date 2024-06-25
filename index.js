@@ -44,3 +44,7 @@ app.listen(3000, ()=>{
 app.get('/clientes', (req,res) =>{
     res.render('clientes/index', {listaclientes: dadosFalsos})
 })
+
+app.get('/clientes/novo', (req,res) =>{
+    res.render('clientes/formCliente')
+})
