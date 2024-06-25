@@ -11,6 +11,23 @@ app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist
 app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')))
 app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
 
+const dadosFalsos = [
+    {
+    id: 1,
+    nome: "Gabriel Retzlaff",
+    endereco: "Estrada Morro do Meio",
+    telefone: "(47)98435-7555",
+    dataNasc: "02/12/2004"
+    },
+    {
+    id: 2,
+    nome: "Lucas Giugno",
+    endereco: "XV de Novembro",
+    telefone: "(47)93115-1341",
+    dataNasc: "12/01/2006"
+    },
+]
+
 //let count = 0
 
 app.get('/', (req,res) =>{
@@ -25,5 +42,5 @@ app.listen(3000, ()=>{
 })
 
 app.get('/clientes', (req,res) =>{
-    res.render('clientes/index')
+    res.render('clientes/index', {listaclientes: dadosFalsos})
 })
