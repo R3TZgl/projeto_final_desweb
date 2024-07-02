@@ -32,14 +32,14 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
 const dadosfalsos = [
     {
         id: 1,
-        nome: "Zezinho da Silva Sauro",
-        endereco: "Rua lalalala 100",
-        telefone: "5555-4322",
-        datanascimento: "24/06/2024"
+        nome: "Gabriel Retzlaff",
+        endereco: "Estrada Morro do Meio",
+        telefone: "47 98435-7555",
+        datanascimento: "02/12/2004"
     },
     {
         id: 2,
-        nome: "Mariazinha da Silva",
+        nome: "Joao7265",
         endereco: "Rua lululu 200",
         telefone: "5555-34234243",
         datanascimento: "23/06/2024"
